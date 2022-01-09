@@ -23,7 +23,7 @@ sudo apt install git
 
 Clonar o repositório a ser usado
 ```
-
+git clone https://github.com/armando-nahmias/Debian-Data-Science/
 ```
 
 _Run as ROOT_
