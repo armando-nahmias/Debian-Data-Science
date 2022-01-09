@@ -1,15 +1,13 @@
 # Debian-Data-Science
 Debian customizations for Data Science
 
-## Requirements
-_This install changes Debian to the SID (Dev) Branch_
+#This install changes Debian to the SID (Dev) Branch_
 
 ### Download Debian non-free netinstall
 
 Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/>
 
 *do NOT grab the EDU download and this includes non-free and firmware*
-### Base Stuff - Root
 
 Autorizar o usuário a usar o sudo
 
@@ -24,7 +22,7 @@ Clonar o repositório a ser usado
 
     git clone https://github.com/armando-nahmias/Debian-Data-Science/
 
-_Run as ROOT_
+Mudar a lista de fontes para o debian sid
 
     cp /etc/apt/sources.list /etc/apt/sources.list.bak
     cp sources.list /etc/apt/sources.list 
@@ -55,5 +53,26 @@ fi
 
 Depois, reinicie o terminal
 
+Depois que o pyenv estiver funcionando 
+
+
+Instalando o pipx
+
+    pyenv -v
+    
+Se der erro, adicione as seguintes linhas ao final do arquivo de configuração do seu bash
+
+    .bashrc if you use bash
+    .zshrc if you use zsh
+
+```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+```
+
+Depois, reinicie o terminal
 
 
