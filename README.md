@@ -17,6 +17,12 @@ Clonar o repositório a ser usado
 
     git clone https://github.com/armando-nahmias/Debian-Data-Science/
 
+Se precisar fazer alterações no repositório, será necessário configurar o git
+
+git config –global user.email "email"
+git config –global user.name "nome"
+
+
 Mudar a lista de fontes para o debian sid
 
     cp /etc/apt/sources.list /etc/apt/sources.list.bak
