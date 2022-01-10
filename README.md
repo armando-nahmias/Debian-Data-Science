@@ -71,7 +71,7 @@ Instalando o pipx
 
 Garantir que o pipx esteja no path
     pipx ensurepath
-    
+      
     
 Se nao funcionar, adicione a seguinte linha ao final do arquivo de configuração do seu bash
 
