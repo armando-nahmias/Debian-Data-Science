@@ -1,13 +1,8 @@
 # Debian-Data-Science
 Debian customizations for Data Science
 
-#This install changes Debian to the SID (Dev) Branch_
-
-### Download Debian non-free netinstall
-
-Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/>
-
-*do NOT grab the EDU download and this includes non-free and firmware*
+Primeiro, baixe a imagem ISO do endereço: <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/>
+Não utilize a versão EDU.
 
 Autorizar o usuário a usar o sudo
 
@@ -55,24 +50,39 @@ Depois, reinicie o terminal
 
 Depois que o pyenv estiver funcionando 
 
+Conferir as versões disponíveis do Python
+
+    pyenv install -l
+
+Escolher uma versão e instalar
+
+    pyenv install 3.10.0
+
+marcar versão para uso global
+
+    pyenv global 3.10.0
+
+
+
 
 Instalando o pipx
 
-    pyenv -v
+    pip install pipx
+
+Garantir que o pipx esteja no path
+    pipx ensurepath
     
-Se der erro, adicione as seguintes linhas ao final do arquivo de configuração do seu bash
+    
+Se nao funcionar, adicione a seguinte linha ao final do arquivo de configuração do seu bash
 
     .bashrc if you use bash
     .zshrc if you use zsh
 
 ```
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
- eval "$(pyenv init -)"
-fi
+export PYTHONPATH="$HOME/.local/bin"
 ```
 
 Depois, reinicie o terminal
 
-
+Instalar o poetry
+    pipx install poetry
