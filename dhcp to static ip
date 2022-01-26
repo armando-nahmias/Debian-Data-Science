@@ -1,38 +1,27 @@
-As a Debian user, you can easily set up a static IP by using your terminal. To do so, firstly, you have to select an active network interface on your system.
-How to check available network interfaces on Debian 11
+Step 4: Assign Static IP Address
 
-You can utilize the “ip” command to get the details about your system’s currently available network interfaces. The “ip” is an abbreviation for “Internet Protocol”. The “ip” command is a utility used by network and system administrators in Linux-based systems to configure network interfaces. In the “ip” command, “link” is the sub-command added to view and modify the network interface. Write out the below-given command in your Debian 11 terminal for viewing the currently available network interfaces:
-$ ip link
+Edit the network configuration file by running the following command.
 
-From the output, we will note down the name of our active network interface, which is “enpos3”. As “enpos3” is the network interface for which we will set up a static IP:
+sudo nano /etc/network/interfaces
 
-How to set up a static IP address on Debian 11
+This file may look like the following.
 
-Now, open the configuration file of the network interfaces “/etc/network/interfaces” in the nano editor:
-$ sudo nano /etc/network/interfaces
+Edit the configuration as follows.
 
-With the default settings, your network interfaces configuration file will look like this:
+auto ens18
+iface ens18 inet static
+  address 192.168.0.2
+  netmask 255.255.255.0
+  gateway 192.168.0.1
+  dns-nameservers 89.207.128.252 89.207.130.252
 
-In the “/etc/network/interfaces” file, add the following details about your network interface, such as its static IP address, which you want to set up, netmask, gateway, dns-nameservers:
-auto enp0s3
-iface enp0s3 inet static
-address 192.168.2.2
-netmask 255.255.255.0
-gateway 192.168.2.2
-dns-nameservers 8.8.4.4 8.8.8.8
+Make sure not to change the loopback adapter config. After the change, it will look something like the following screenshot.
 
-Here, the first two lines declare that we are setting a static IP address for the “enpos3” network interface:
+Save the file and exit from the editor.
+Step 5: Restart Networking Service
 
-To save the changes you have made in the network interface configuration file, press “CTRL+O”:
+Restart the networking service so that the updated configuration can be applied. Run the command.
 
-How to restart the networking service on Debian 11
+sudo systemctl restart networking
 
-After configuring the static IP address for the “enpos3” network interface, now we will restart the networking service using the systemctl command:
-$ sudo systemctl restart NetworkManager.service
-
-You can verify if your Debian system has configured the static IP for your selected network interface:
-$ ip a
-
-From the output, you can see that we have successfully configured static IP address our “enpos3” network interface to “192.168.2.2”:
-
-https://linuxhint.com/debian-static-ip-configuration/
+https://www.snel.com/support/how-to-configure-static-ip-on-debian-10/
