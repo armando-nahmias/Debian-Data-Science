@@ -8,6 +8,14 @@ Autorizar o usuário a usar o sudo
 
     sudo usermod -aG sudo username
 
+Disable Root Login in Linux with passwd Command
+
+To disable the root login, you can use the passwd command as below:
+
+    sudo passwd -l root
+
+This will lock the password for the root user and you won’t be able to access the root account with its password until a new one is set.
+
 Install git
 
     sudo apt install git
