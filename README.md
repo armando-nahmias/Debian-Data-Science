@@ -38,8 +38,17 @@ Mudar a lista de fontes para o debian sid
 
 Instalar dependências para o pyenv
 
-    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
-    curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+    sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+How to verify that I have set up pyenv correctly?
+
+Check that pyenv is in your PATH:
+
+    which pyenv
+
+Check that pyenv's shims directory is in your PATH:
+
+    echo $PATH | grep --color=auto "$(pyenv root)/shims"
 
 Validando a instalação do pyenv
 
