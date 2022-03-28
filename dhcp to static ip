@@ -10,10 +10,10 @@ Edit the configuration as follows.
 
 auto ens18
 iface ens18 inet static
-  address 192.168.0.2
+  address 172.16.1.131
   netmask 255.255.255.0
-  gateway 192.168.0.1
-  dns-nameservers 89.207.128.252 89.207.130.252
+  gateway 172.16.1.155
+  dns-nameservers 1.1.1.1 1.0.0.1
 
 Make sure not to change the loopback adapter config. After the change, it will look something like the following screenshot.
 
