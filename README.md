@@ -1,8 +1,7 @@
 # Debian-Data-Science
 Debian customizations for Data Science
 
-Primeiro, baixe a imagem ISO do endereço: <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/>
-Não utilize a versão EDU.
+Primeiro, baixe a imagem ISO disponível na página: <https://www.debian.org/distrib/netinst> ou diretamente do endereço <https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.6.0-amd64-netinst.iso>.
 
 Mudar a lista de fontes para o debian sid
 
