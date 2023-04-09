@@ -31,4 +31,12 @@ Mudar a lista de fontes para o debian sid
     sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
     sudo cp sources.list /etc/apt/sources.list 
 
+Checar endereço da máquina remota
+ip a
+
+Gerar chave pública na máquina local
+ssh-keygen
+
+copiar a chave pública para a máquina remota
+ssh-copy-id usuario@ip.da.maquina.remota
 
