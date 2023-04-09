@@ -5,8 +5,8 @@ Primeiro, baixe a imagem ISO disponível na página: <https://www.debian.org/dis
 
 Mudar a lista de fontes para o debian sid
 
-    cp /etc/apt/sources.list /etc/apt/sources.list.bak
-    cp sources.list /etc/apt/sources.list 
+    sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+    sudo cp sources.list /etc/apt/sources.list 
 
 
 Disable Root Login in Linux with passwd Command
